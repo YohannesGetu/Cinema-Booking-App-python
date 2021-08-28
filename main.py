@@ -44,6 +44,7 @@ class Ticket:
     def __init__(self, user, price, seat_number):
         self.user = user
         self.price = price
+        self.id = "".join([random.choice(string.ascii_letters) for i in range(8)])
         self.seat_number = seat_number
 
     def to_pdf(self):
